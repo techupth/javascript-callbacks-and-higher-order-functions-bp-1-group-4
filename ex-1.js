@@ -1,12 +1,16 @@
+const employeeSalaries = [20005, 40000, 32000, 14500, 344000];
+let increase = 5000;
 // Exercise #1: For Each Function
 
-function forEach(array, operation) {
-  // Start coding here
+function RaiseSalaries (amount, add) {
+  return amount + add
 }
+function forEach(callbackOperation, array, number) {
+  const newEmployeeSalaries = [];
+  for(let i = 0; i < array.length; i++) {
+    newEmployeeSalaries.push(callbackOperation(array[i], number))
+  }
+  console.log(newEmployeeSalaries)
+}
+let  netSalaries = forEach(RaiseSalaries, employeeSalaries, increase)
 
-const employeeSalaries = [20005, 40000, 32000, 14500, 344000];
-const newEmployeeSalaries = [];
-
-// Using `forEach` function here
-
-console.log(newEmployeeSalaries); // [25005, 45000, 37000, 19500, 349000]
